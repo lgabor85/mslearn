@@ -1,0 +1,20 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "adminUsername": {
+        "value": "azureuser"
+      },
+      "vmName": {
+        "value": "vm2"
+      },
+      "adminPasswordOrKey": {
+        "reference": {
+           "keyVault": {
+           "id": "/subscriptions/6747d176-a3d1-49a6-b54b-760c30ee1622/resourceGroups/mslearn16rg/providers/Microsoft.KeyVault/vaults/mslearn16"
+           },
+           "secretName": "vmAdminPassword"
+        }
+      }
+    }
+  }
